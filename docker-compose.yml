@@ -1,0 +1,49 @@
+version: '3.8'
+services:
+  chatshare_biz_1:
+    image: chatshare_biz:latest
+    container_name: chatshare_biz_1
+    volumes:
+    - ./browser_data:/app/browser_data
+      # - ./browser_data/openai:/app/browser_data/openai
+      # - ./browser_data/openai/Default:/app/browser_data/openai/Default:ro
+      # - ./browser_data/openai/Local State:/app/browser_data/openai/Local State:ro
+    ports:
+      - "5001:5000"
+    restart: unless-stopped
+
+  # chatshare_biz_2:
+  #   image: chatshare_biz:latest
+  #   container_name: chatshare_biz_2
+  #   volumes:
+  #     - ./browser_data:/app/browser_data:ro
+  #   ports:
+  #     - "5002:5000"
+  #   restart: unless-stopped
+
+  # chatshare_biz_3:
+  #   image: chatshare_biz:latest
+  #   container_name: chatshare_biz_3
+  #   volumes:
+  #     - ./browser_data:/app/browser_data:ro
+  #   ports:
+  #     - "5003:5000"
+  #   restart: unless-stopped
+
+  # chatshare_biz_4:
+  #   image: chatshare_biz:latest
+  #   container_name: chatshare_biz_4
+  #   volumes:
+  #     - ./browser_data:/app/browser_data:ro
+  #   ports:
+  #     - "5004:5000"
+  #   restart: unless-stopped
+
+  # chatshare_biz_5:
+  #   image: chatshare_biz:latest
+  #   container_name: chatshare_biz_5
+  #   volumes:
+  #     - ./browser_data:/app/browser_data:ro
+  #   ports:
+  #     - "5005:5000"
+  #   restart: unless-stopped
